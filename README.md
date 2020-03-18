@@ -1,3 +1,21 @@
+## Getting Started
+
+### Setting up application
+
+- Clone the repository.
+- Run `yarn`
+- Create `.env` file. Refer `.env.example` file.
+
+### Running the application
+
+```bash
+  # For development
+  yarn start
+
+  # For production
+  yarn start:prod
+```
+
 ## Structure
 
 `src` contains the whole source code of the api.
