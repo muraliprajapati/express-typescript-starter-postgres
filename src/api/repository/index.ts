@@ -1,1 +1,1 @@
-export { default as MongoClient } from './mongo/mongo.repository';
+export { default as PostgresClient } from './postgres/postgres.repository';

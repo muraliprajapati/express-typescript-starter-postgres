@@ -17,7 +17,6 @@
       "@logger": ["config/logger.ts"],
       "@utils/*": ["api/utils/*"],
       "@services/*": ["api/services/*"],
-      "@repository/mongo/*": ["api/repository/mongo/collection/*"],
       "@models/*": ["models/*"]
     },
     "esModuleInterop": true

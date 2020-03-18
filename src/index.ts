@@ -22,16 +22,15 @@ import 'reflect-metadata';
 import constants from '@constants';
 import logger from '@logger';
 import app from './config/express';
-// import { MongoClient } from './api/repository';
+import PostgresClient from './api/repository/postgres/postgres.repository';
 
 const { port, env } = constants;
 
 app.listen(port, async () => {
   logger.info(`server started on port ${port} (${env})`);
   try {
-    // const dbClient = new MongoClient();
-    // const dbInstance = await dbClient.connect();
-    logger.info(`Connected to DB...`);
+    const dbClient = new PostgresClient();
+    await dbClient.connect();
   } catch (error) {
     logger.info(`Failed to connect to DB`);
   }
