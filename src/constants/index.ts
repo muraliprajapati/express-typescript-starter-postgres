@@ -1,7 +1,7 @@
 import dotenv from 'dotenv-safe';
 
 // import .env variables
-dotenv.config();
+// dotenv.config();
 
 import common from './constants.common';
 

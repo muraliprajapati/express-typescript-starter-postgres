@@ -23,13 +23,15 @@ import constants from '@constants';
 import logger from '@logger';
 import app from './config/express';
 import PostgresClient from './api/repository/postgres/postgres.repository';
+import MySQLClient from './api/repository/mysql/mysql.repository';
 
 const { port, env } = constants;
 
 app.listen(port, async () => {
   logger.info(`server started on port ${port} (${env})`);
   try {
-    const dbClient = new PostgresClient();
+    const dbClient = new MySQLClient();
+    // const dbClient = new PostgresClient();
     await dbClient.connect();
   } catch (error) {
     logger.info(`Failed to connect to DB`);
